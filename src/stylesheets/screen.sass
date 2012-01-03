@@ -1,0 +1,182 @@
+@import blueprint/reset
+@import partials/base
+@import blueprint
+@import compass/typography/links/link-colors
+@import compass/typography/links/hover-link
+body
+  +blueprint-typography(true)
+  background-color: rgb(238,238,238)
+  font:
+    family: "trebuchet MS"
+    size: 10pt
+  a
+    +link-colors(rgb(110,109,109), orange, red, rgb(110,109,109))
+    +hover-link
+  .container, #container
+    +container
+  header
+    nav
+      p
+        line-height: 30px
+      &#sub-nav
+        background-color: rgb(0,0,0)
+        p
+          font-size: 11px
+          text-align: right
+          a
+            display: inline-block
+            margin: 0px 10px
+            &:link
+              color: #999
+      &#main-nav
+        background-color: rgb(34,34,34)
+        margin: 0 0 40px
+        p
+          line-height: 55px
+          a
+            display: inline-block
+            margin: 0 20px
+            &:first-child
+              margin-left: 0px
+    hgroup
+      background-color: rgb(109,108,108)
+      border-bottom: solid 1px white
+      padding: 20px 0 20px
+      h1
+        font:
+          size: 32px
+      h2
+        font:
+          size: 18px
+  #container
+    #content
+      +container
+      #homepage
+        #teaser
+          +container
+          border-bottom: solid 1px $lightgrey
+          margin-bottom: 30px
+          .four-col
+            +column(3)
+            &:last-child
+              +column(3,true)
+            h3
+            .img-box
+              position: relative
+              padding: 5px !important
+              background-color: #fff
+              text-align: center
+              border: solid 1px $darkgrey
+              img
+                display: block
+              span
+                font:
+                  size: 11px
+                position: absolute
+                top: 0px
+                right: 0px
+                padding: 5px 12px
+                color: rgb(110,109,109)
+                background-color: $darkgrey
+            .more
+              background-color: $lightgrey
+              display: inline-block
+              color: $darkgrey !important
+              font:
+                size: 10px
+              margin: 10px 0px 20px
+              padding: 5px 10px
+        #latest
+          +column(8)
+          .each
+            margin-bottom: 55px
+            padding-bottom: 35px
+            border-bottom: 1px solid $lightgrey
+            h3
+              font:
+                size: 40px
+              margin-bottom: 15px
+            h4
+              font:
+                size: 11px
+              background-color: $lightgrey
+              color: $darkgrey
+              width: 80px
+              padding: 5px 8px
+            .img-box
+              position: relative
+              padding: 5px !important
+              background-color: #fff
+              text-align: center
+              border: solid 1px $darkgrey
+              +column(3.05, true)
+              margin: 0 10px 0 0
+              img
+                display: block
+              span
+                font:
+                  size: 11px
+                position: absolute
+                top: 0px
+                left: 0px
+                padding: 5px 12px
+                color: rgb(110,109,109)
+                background-color: $darkgrey
+            a
+              float: right
+              background-color: $lightgrey
+              display: inline-block
+              color: $darkgrey !important
+              font:
+                size: 10px
+              padding: 5px 10px
+        #featured
+          +column(4,true)
+          background-color: $darkgrey
+          padding: 20px 0px
+          h2, ul
+            margin: 0px 10px
+          h2
+            color: $lightgrey
+          ul
+            padding: 10px 0px 0px
+            list-style: none
+            border-top: solid 1px #000
+            li
+              overflow: hidden
+              border-bottom: solid 1px #000
+              margin: 0 0 10px
+              padding-bottom: 10px
+              h3
+                font:
+                  size: 12px
+                color: $lightgrey
+                margin-bottom: auto
+              .img-box
+                +column(1.13, true)
+                margin-right: 15px
+              .featured-content
+                font:
+                  size: 11px
+                line-height: auto
+                color: #424242
+                p
+                  margin: 0
+        
+  footer
+    background-color: $darkgrey
+    #footer-content
+      +container
+      .four-col
+        margin: 40px 0 45px
+        +column(3)
+        &:last-child
+          +column(3,true)
+        h6
+          color: #fff
+          font:
+            size: 20px
+          margin-bottom: 30px
+        a
+          display: block
+          padding: 7px 0

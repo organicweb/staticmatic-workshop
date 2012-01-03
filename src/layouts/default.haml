@@ -1,0 +1,51 @@
+!!!
+%html
+  %head
+    %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=UTF-8"}/
+    %title StaticMatic Demo
+    = stylesheets :screen
+    /[if IE]
+      =stylesheets :ie, :media => "screen"
+  %body
+    %header
+      %nav#sub-nav
+        %p.container
+          =link_to "Home", "/"
+          =link_to "About"
+          =link_to "Contact"
+      %hgroup
+        %h1.container Another website
+        %h2.container Just another one
+      %nav#main-nav
+        %p.container
+          =link_to "Home", "/"
+          - 5.times do |num|
+            =link_to "Rubrique #{num}", "rubrique"
+    #container
+      #content
+        = yield
+    %footer
+      #footer-content
+        .four-col
+          %h6 Articles recents
+          - 6.times do |num|
+            =link_to "Article #{num}", 'article'
+        .four-col
+          %h6 Our friends
+          - 3.times do |num|
+            =link_to "Lien #{num}", "#"
+        #thumbs-box.four-col
+          %h6 Pict stream
+          =img "http://www.lorempixel.com/54/47/abstract"
+          =img "http://www.lorempixel.com/54/47/nature"
+          =img "http://www.lorempixel.com/54/47/people"
+          =img "http://www.lorempixel.com/54/47/food"
+          =img "http://www.lorempixel.com/54/47/city"
+          =img "http://www.lorempixel.com/54/47/sports"
+          =img "http://www.lorempixel.com/54/47/nightlife"
+          =img "http://www.lorempixel.com/54/47/technics"
+          =img "http://www.lorempixel.com/54/47/fashion"
+        #social-box.four-col
+          %h6 Follow Us
+          =link_to "Twitter", "#", :id => "tw"
+          =link_to "Facebouc", "#", :id => "fb"
