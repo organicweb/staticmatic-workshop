@@ -2,7 +2,7 @@
 # configuration.preview_server_port = 3000
  
 # Default is localhost
-configuration.preview_server_host = "192.168.8.125"
+configuration.preview_server_host = "localhost"
  
 # Default is true
 # When false .html & index.html get stripped off generated urls
